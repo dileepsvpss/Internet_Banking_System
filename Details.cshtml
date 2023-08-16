@@ -1,0 +1,36 @@
+﻿@model online_internet_banking.Models.Manager
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Manager</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.branchcode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.branchcode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.branchcity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.branchcity)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.BMID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

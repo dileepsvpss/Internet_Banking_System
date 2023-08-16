@@ -1,0 +1,47 @@
+﻿@model IEnumerable<online_internet_banking.Models.Manager>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.branchcode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.branchcity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.branchcode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.branchcity)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BMID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BMID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BMID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
